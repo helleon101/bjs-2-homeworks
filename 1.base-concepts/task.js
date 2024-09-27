@@ -1,22 +1,24 @@
 "use strict";
+
 function solveEquation(a, b, c) {
-  let d = b ** 2 - 4 * a * c;
-  if (d > 0) {
-    return [];
-  } else if (d === 0) {
-    return [-b / (2 * a)];
+  let discriminant = b ** 2 - 4 * a * c;
+  let roots = [];
+
+  if (discriminant < 0) {
+    return roots;
+  } else if (discriminant === 0) {
+    let singleRoot = -b / (2 * a);
+    roots.push(singleRoot);
+    return roots;
   } else {
-    let x = (-b + Math.sqrt(d)) / (2 * a);
-    let y = (-b - Math.sqrt(d)) / (2 * a);
-    return [x, y];
+    let root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+    let root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+    roots.push(root1, root2);
+    return roots;
   }
 }
-let a = 5;
-let b = -3;
-let c = 6;
 
-let roots = solveEquation(a, b, c);
-console.log(roots);
+console.log(solveEquation(1, -3, 2));
 
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   let monthlyPercent = percent / 100 / 12;
