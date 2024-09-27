@@ -17,8 +17,9 @@ function solveEquation(a, b, c) {
     return roots;
   }
 }
-
 console.log(solveEquation(1, -3, 2));
+console.log(solveEquation(1, 2, 1));
+console.log(solveEquation(1, 0, 1));
 
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   let monthlyPercent = percent / 100 / 12;
