@@ -69,10 +69,10 @@ const sherlock = new PrintEditionItem(
   1008
 );
 
-console.log(sherlock.releaseDate);
+/* console.log(sherlock.releaseDate);
 console.log(sherlock.state);
 sherlock.fix();
-console.log(sherlock.state);
+console.log(sherlock.state); */
 
 const picknick = new FantasticBook(
   "Аркадий и Борис Стругацкие",
@@ -81,11 +81,11 @@ const picknick = new FantasticBook(
   168
 );
 
-console.log(picknick.author);
+/* console.log(picknick.author);
 picknick.state = 10;
 console.log(picknick.state);
 picknick.fix();
-console.log(picknick.state);
+console.log(picknick.state); */
 
 class Library {
   constructor(name) {
@@ -133,12 +133,12 @@ library.addBook(
 library.addBook(new NovelBook("Герберт Уэллс", "Машина времени", 1895, 138));
 library.addBook(new Magazine("Мурзилка", 1924, 60));
 
-console.log(library.findBookBy("name", "Властелин колец"));
+/* console.log(library.findBookBy("name", "Властелин колец"));
 console.log(library.findBookBy("releaseDate", 1924).name);
 
-console.log("Количество книг до выдачи: " + library.books.length);
+console.log("Количество книг до выдачи: " + library.books.length); */
 library.giveBookByName("Машина времени");
-console.log("Количество книг после выдачи: " + library.books.length);
+/* console.log("Количество книг после выдачи: " + library.books.length); */
 
 class Student {
   constructor(name) {
@@ -184,6 +184,6 @@ student.addMark(5, "физика");
 student.addMark(4, "физика");
 student.addMark(6, "физика");
 
-console.log(student.getAverageBySubject("физика"));
+/* console.log(student.getAverageBySubject("физика"));
 console.log(student.getAverageBySubject("биология"));
-console.log(student.getAverage());
+console.log(student.getAverage()); */
